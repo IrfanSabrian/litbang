@@ -782,43 +782,135 @@
 
 
 
-  
-  
-  <div class="w-100">
-    <h2 class="text-2xl font-bold mt-6 text-center text-gray-800 dark:text-gray-100">Agenda</h2>
-    <div class="text-gray-800 dark:text-gray-100 p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 ">
-      
-      <div class="dark:bg-gray-900 bg-white p-4 rounded-lg shadow-lg">
-        <h3 class="font-bold text-lg">Selasa</h3>
-        <p>Ruang rapat Bappeda Provinsi Kalbar Lantai 3 Gedung Pelayanan Terpadu</p>
-        <p>08:30 - 13:00</p>
-        <p class="break-words overflow-auto">Rapat Tindak Lanjut Cetak Biru PPM pada Kegiatan Usaha Pertambangan</p>
-      </div>
-      
-      <div class="dark:bg-gray-900 bg-white p-4 rounded-lg shadow-lg">
-        <h3 class="font-bold text-lg">Selasa</h3>
-        <p>Ruang Rapat Balitbang Provnsi Kalbar</p>
-        <p>11:00 - 12:00</p>
-        <p class="break-words overflow-auto">Visitasi Keterbukaan Informasi Publik</p>
-      </div>
-      
-      <div class="dark:bg-gray-900 bg-white p-4 rounded-lg shadow-lg">
-        <h3 class="font-bold text-lg">Selasa</h3>
-        <p>Ruang rapat Bappeda Provinsi Kalbar Lantai 3 Gedung Pelayanan Terpadu</p>
-        <p>08:00 - 12:00</p>
-        <p class="break-words overflow-auto">Rapat Koordinasi Majelis Pertimbangan Balitbang Provinsi Kalimantan Barat</p>
-      </div>
-      
-      <div class="dark:bg-gray-900 bg-white p-4 rounded-lg shadow-lg">
-        <h3 class="font-bold text-lg">Kamis</h3>
-        <p>Ruang Rapat Balitbang Provnsi Kalbar</p>
-        <p>09:00 - 13:00</p>
-        <p class="break-words overflow-auto">Pengidentifikasian Inovasi Tingkat SMA, SMK, dan SLB Dalam Rangka Peningkatan Indeks Inovasi Daerah di Provinsi Kalimantan Barat</p>
-      </div>
-      
+
+
+<div class="w-full max-w-full bg-white p-4 border border-gray-300 shadow rounded">
+  <h2 class="text-2xl font-bold mt-6 text-center text-gray-800 dark:text-gray-100 mb-4">Agenda</h2>
+    <div class="marquee-container" style="overflow: hidden; white-space: nowrap;">
+        <div class="marquee-content" style="display: inline-flex; animation: marquee 30s linear infinite;">
+            
+            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg shadow-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden;">
+                <div class="flex-none p-6 rounded-l-lg h-full flex flex-col justify-center items-center" style="background-color: #585858; text-align: center; width: 150px;">
+                    <h2 class="font-bold text-white text-7xl" data-day="Selasa">Loading...</h2>
+                    <h3 class="text-2xl text-white">Selasa</h3>
+                </div>
+                <div class="ml-4 flex-grow" style="max-width: calc(450px - 100px); overflow: hidden;">
+                    <h3 class="font-bold mt-2" style="font-size: 15px; line-height: 1.5; min-height: 4.5em; display: flex; flex-direction: column; justify-content: center; white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">Rapat Tindak Lanjut Cetak Biru PPM pada Kegiatan Usaha Pertambangan</h3>
+                    <hr style="border-top: 1px solid black; margin-top: 8px; margin-bottom: 8px; width: 100%;">
+                    <div class="flex items-center mt-4 mb-2" style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">
+                        <div class="flex-none w-6 h-6 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: calc(450px - 100px - 2rem);">Ruang rapat Bappeda Provinsi Kalbar Lantai 3 Gedung Pelayanan Terpadu</p>
+                    </div>
+                    <p style="text-align: right; margin-top: 8px; margin-right: 8px; color: #989292;">08:30 - 13:00</p>
+                </div>
+            </div>
+            
+            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg shadow-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden;">
+                <div class="flex-none p-6 rounded-l-lg h-full flex flex-col justify-center items-center" style="background-color: #585858; text-align: center; width: 150px;">
+                    <h2 class="font-bold text-white text-7xl" data-day="Selasa">Loading...</h2>
+                    <h3 class="text-2xl text-white">Selasa</h3>
+                </div>
+                <div class="ml-4 flex-grow" style="max-width: calc(450px - 100px); overflow: hidden;">
+                    <h3 class="font-bold mt-2" style="font-size: 15px; line-height: 1.5; min-height: 4.5em; display: flex; flex-direction: column; justify-content: center; white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">Visitasi Keterbukaan Informasi Publik</h3>
+                    <hr style="border-top: 1px solid black; margin-top: 8px; margin-bottom: 8px; width: 100%;">
+                    <div class="flex items-center mt-4 mb-2" style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">
+                        <div class="flex-none w-6 h-6 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: calc(450px - 100px - 2rem);">Ruang Rapat Balitbang Provnsi Kalbar</p>
+                    </div>
+                    <p style="text-align: right; margin-top: 8px; margin-right: 8px; color: #989292;">11:00 - 12:00</p>
+                </div>
+            </div>
+            
+            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg shadow-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden;">
+                <div class="flex-none p-6 rounded-l-lg h-full flex flex-col justify-center items-center" style="background-color: #585858; text-align: center; width: 150px;">
+                    <h2 class="font-bold text-white text-7xl" data-day="Selasa">Loading...</h2>
+                    <h3 class="text-2xl text-white">Selasa</h3>
+                </div>
+                <div class="ml-4 flex-grow" style="max-width: calc(450px - 100px); overflow: hidden;">
+                    <h3 class="font-bold mt-2" style="font-size: 15px; line-height: 1.5; min-height: 4.5em; display: flex; flex-direction: column; justify-content: center; white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">Rapat Koordinasi Majelis Pertimbangan Balitbang Provinsi Kalimantan Barat</h3>
+                    <hr style="border-top: 1px solid black; margin-top: 8px; margin-bottom: 8px; width: 100%;">
+                    <div class="flex items-center mt-4 mb-2" style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">
+                        <div class="flex-none w-6 h-6 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: calc(450px - 100px - 2rem);">Ruang rapat Bappeda Provinsi Kalbar Lantai 3 Gedung Pelayanan Terpadu</p>
+                    </div>
+                    <p style="text-align: right; margin-top: 8px; margin-right: 8px; color: #989292;">08:00 - 12:00</p>
+                </div>
+            </div>
+            
+            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg shadow-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden;">
+                <div class="flex-none p-6 rounded-l-lg h-full flex flex-col justify-center items-center" style="background-color: #585858; text-align: center; width: 150px;">
+                    <h2 class="font-bold text-white text-7xl" data-day="Kamis">Loading...</h2>
+                    <h3 class="text-2xl text-white">Kamis</h3>
+                </div>
+                <div class="ml-4 flex-grow" style="max-width: calc(450px - 100px); overflow: hidden;">
+                    <h3 class="font-bold mt-2" style="font-size: 15px; line-height: 1.5; min-height: 4.5em; display: flex; flex-direction: column; justify-content: center; white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">Pengidentifikasian Inovasi Tingkat SMA, SMK, dan SLB Dalam Rangka Peningkatan Indeks Inovasi Daerah di Provinsi Kalimantan Barat</h3>
+                    <hr style="border-top: 1px solid black; margin-top: 8px; margin-bottom: 8px; width: 100%;">
+                    <div class="flex items-center mt-4 mb-2" style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: 100%;">
+                        <div class="flex-none w-6 h-6 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <p style="white-space: normal; word-break: break-word; overflow-wrap: break-word; max-width: calc(450px - 100px - 2rem);">Ruang Rapat Balitbang Provnsi Kalbar</p>
+                    </div>
+                    <p style="text-align: right; margin-top: 8px; margin-right: 8px; color: #989292;">09:00 - 13:00</p>
+                </div>
+            </div>
+            
+        </div>
     </div>
-  </div>
-  
+</div>
+
+
+
+<style>
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+</style>
+
+<script>
+  function getCurrentDate(day) {
+    const today = new Date();
+    const dayIndex = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"].indexOf(day);
+    const startOfWeek = today.getDate() - today.getDay();
+    const dateForDay = new Date(today.setDate(startOfWeek + dayIndex));
+    return dateForDay.getDate();
+  }
+
+  document.querySelectorAll('[data-day]').forEach(element => {
+    const day = element.getAttribute('data-day');
+    if (day) {
+      element.textContent = getCurrentDate(day);
+    }
+  });
+</script>
+
 </div>
     </main>
 <footer class='p-6 mx-auto flex items-center justify-between w-full relative bottom-0 bg-green-700 text-white dark:bg-gray-900'>
