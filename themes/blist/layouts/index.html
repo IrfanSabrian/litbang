@@ -125,43 +125,44 @@
     startAutoScroll();
   };
 </script>
-<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16 fade-in bg-white dark:bg-gray-200" id="animateMe">
-  <div>
+
+<!-- Container Utama dengan Grid -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-4 lg:gap-8 bg-white dark:bg-gray-800 p-5">
+
+  <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-4 md:col-span-4">
     {{ $frontBundle := .Site.Params.frontBundle | default "berita" }}
-    <h2 class="text-2xl font-bold mt-5 text-center mb-5 dark:text-gray-800">{{ $frontBundle | title }}</h2>
-    <div class="grid grid-cols-1 min-h-72 sm:grid-cols-2 mx-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8 px-5">
-      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
-      <div class="rounded-lg w-full h-full ">
+    <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">{{ $frontBundle | title }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8 px-5">
+      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle) }}
+      <div class="rounded-lg w-full h-full">
         {{- partial "blog-card.html" . -}}
       </div>
       {{ end }}
     </div>
+    {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
+    <div class="text-center mb-8 mt-4">
+      <a class="px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
+        {{ i18n "morePosts" }}
+      </a>
+    </div>
+    {{ end }}
   </div>
-  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
-  <div class="text-center mb-8 mt-4">
-    <a class='px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white' href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
-      {{ i18n "morePosts" }}
-    </a>
-  </div>
-  {{ end }}
-</div>
 
-<div class="bg-gray-200 dark:bg-gray-700">
-  {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
-  <div class="scroll-container pb-5">
-    <h2 class="text-2xl font-bold mt-5 text-center text-gray-800 dark:text-gray-100">{{ $frontBundle2 | title }}</h2>
-    <div class="scroll-content animation fade-in h-96 mb-5" id="animateMe2">
-      {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
-      <div class="rounded-lg h-full mb-2">
-        <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
+  <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-4 md:col-span-2">
+    {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
+    <div class="scroll-container pb-5">
+      <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">{{ $frontBundle2 | title }}</h2>
+      <div class="scroll-content animation fade-in h-96 mb-5">
+        {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
+        <div class="rounded-lg h-full mb-2">
+          <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
+        </div>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
   </div>
 
-
-
-
+</div>
 
 <!--<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16">
     <div>
@@ -205,14 +206,17 @@
       </div>
     {{ end }}
   </div>-->
+
+
+  <!-- Agenda Section -->
 {{ $agenda := .Site.Params.agenda }}
 {{ if $agenda }}
-<div class="w-full max-w-full bg-white p-4 border border-gray-300 shadow rounded">
-  <h2 class="text-2xl font-bold mt-6 text-center text-gray-800 dark:text-gray-100 mb-4">Agenda</h2>
+<div class="w-full max-w-full p-4 border border-gray-300 shadow rounded">
+  <h2 class="text-2xl font-bold mt-6 text-center text-gray-800 dark:text-black mb-4">Agenda</h2>
     <div class="marquee-container" style="overflow: hidden; white-space: nowrap;">
         <div class="marquee-content" style="display: inline-flex; animation: marquee 30s linear infinite;">
             {{ range $agenda }}
-            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg shadow-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden;">
+            <div class="agenda-item flex-grow dark:bg-gray-900 bg-white rounded-lg flex mx-4" style="background-color: #D9D9D9; width: 450px; overflow: hidden; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);">
                 <div class="flex-none p-6 rounded-l-lg h-full flex flex-col justify-center items-center" style="background-color: #585858; text-align: center; width: 150px;">
                     <h2 class="font-bold text-white text-7xl" data-day="{{ .hari }}">Loading...</h2>
                     <h3 class="text-2xl text-white">{{ .hari }}</h3>
@@ -258,8 +262,17 @@
   function getCurrentDate(day) {
     const today = new Date();
     const dayIndex = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"].indexOf(day);
-    const startOfWeek = today.getDate() - today.getDay();
-    const dateForDay = new Date(today.setDate(startOfWeek + dayIndex));
+    const currentDayIndex = today.getDay();
+
+    // Menghitung awal minggu (hari Minggu di minggu ini)
+    const startOfWeek = today.getDate() - currentDayIndex;
+    
+    // Tentukan offset: jika hari yang diinginkan sudah lewat, tambahkan 7 hari untuk minggu depan
+    const dayOffset = (dayIndex < currentDayIndex) ? 7 : 0;
+
+    // Hitung tanggal untuk hari yang diinginkan, mungkin minggu depan jika hari sudah lewat
+    const dateForDay = new Date(today.setDate(startOfWeek + dayIndex + dayOffset));
+    
     return dateForDay.getDate();
   }
 
@@ -270,6 +283,7 @@
     }
   });
 </script>
+
 
 </div>
 
