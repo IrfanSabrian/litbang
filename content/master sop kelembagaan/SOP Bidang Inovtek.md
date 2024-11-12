@@ -1,0 +1,16 @@
+---
+author: sekret.bppkb
+title: "SOP Bidang Inovtek"
+date: 2024-09-27 02:06:21
+---
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><a href="https://drive.google.com/file/d/1bt2bYUrd1y2-lePYijzw50TyXxZLlwCI/view?usp=sharing"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><span style="color: black;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">SOP Pelaks Swakelola Penelitian Inovtek</span></span></span></span></span></span></a></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><a href="https://drive.google.com/file/d/1DpKC7fTQ9fDI8mdh0N37sSWgz6kf07wZ/view?usp=sharing"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><span style="color: black;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">SOP Pengelolaan Jurnal</span></span></span></span></span></span></a></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><a href="https://drive.google.com/file/d/1n3GmaPmi4ZCN4A--xKHrqzTFu9T2nGFi/view?usp=sharing"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><span style="color: black;">SOP Penerbitan Jurnal</span></span></a><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"></span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><a href="https://drive.google.com/file/d/1ekNiSWMIRuGoRUM2e6WLoFjn6Awt6dG4/view?usp=sharing"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><span style="color: black;">SOP Fasilitasi HKI</span></span></a></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"></p>

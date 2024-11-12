@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  <h1 class="container text-center mb-4 mt-2 px-6 pt-6 mx-auto text-3xl font-bold dark:text-black">{{ .Title }}</h1>
+  {{ $type := .Type }}
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse 12 }}
+  <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-8">
+    {{ range $paginator.Pages }}
+
+      {{ if eq $type "article" }}
+        {{ partial "blog-card.html" . }}
+      {{ else if eq $type "kegiatan" }}
+        {{ partial "kegiatan.html" . }}
+      {{ else if eq $type "page" }}
+        {{ partial "blog-card-2.html" . }}
+      {{ else if eq $type "gallery" }}
+        {{ partial "gallery.html" . }}
+      {{ else if eq $type "externalUrl" }}
+        {{ partial "blog-card.html" . }}
+      {{ else }}
+        <!-- Tambahkan kondisi tipe konten lain jika diperlukan -->
+        Tidak terdeteksi
+      {{ end }}
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+
+{{ end }}

@@ -1,0 +1,26 @@
+---
+author: sekret.bppkb
+title: "Tujuan Sasaran dan Arah Kebijakan"
+date: 2024-08-01 05:19:52
+---
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">TUJUAN, SASARAN, STRATEGI, ARAH KEBIJAKAN</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p>&nbsp;</o:p></span><span style="font-family: Arial, sans-serif; font-size: 10pt;">Tujuan : </span><span style="font-family: Arial, sans-serif; font-size: 10pt;">Mewujudkan Tata Kelola Pemerintahan yang berorientasi pada Pelayanan Publik.</span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">Sasaran :</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">1.&nbsp;&nbsp;&nbsp;&nbsp;Meningkatnya Kualitas Kelitbangan, Penyelenggaraan Inovasi Daerah dan Kekayaan Intelektual untuk Mendukung Kebijakan Pemerintah Daerah serta untuk meningkatkan Daya Saing Daerah.</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">2.&nbsp;&nbsp;&nbsp;&nbsp;Meningkatnya Kinerja Balitbang.</span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">Strategi :</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">1.&nbsp;&nbsp;&nbsp;&nbsp;Menata sistem penentuan pilihan jenis dan topik Kelitbangan yang akan dilaksanakan guna memperoleh prioritas kegiatan Kelitbangan secara selektif.</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">2.&nbsp;&nbsp;&nbsp;&nbsp;Memperkuat fasilitas inovasi daerah yang terintegrasi dan Sistem informasi Database Kelitbangan.</span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">Arah Kebijakan :</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">1.&nbsp;&nbsp;&nbsp;&nbsp;Optimalisasi kelitbangan untuk memenuhi kebutuhan&nbsp;Daerah.</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent: -18.0pt; line-height: normal; margin: 0cm 0cm 0cm 18.0pt;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;">2.&nbsp;&nbsp;&nbsp;&nbsp;Optimalisasi penyelenggara fasiitasi Inovasi Daerah secara berkesinambungan.</span><span style="font-size: 13.5pt; font-family: 'Segoe UI',sans-serif; mso-fareast-font-family: 'Times New Roman'; color: black; mso-fareast-language: EN-ID;"><o:p></o:p></span></p>

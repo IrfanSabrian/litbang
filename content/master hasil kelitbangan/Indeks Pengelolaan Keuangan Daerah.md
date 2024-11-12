@@ -1,0 +1,20 @@
+---
+author: sekret.bppkb
+title: "Indeks Pengelolaan Keuangan Daerah"
+date: 2024-08-06 07:43:05
+---
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-family: arial, helvetica, sans-serif; color: black; font-size: 10pt;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Indeks Pengelolaan Keuangan Daerah 2020, klik disini &gt;&gt;&gt;</span></span></span></span></span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">&nbsp;</span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-family: arial, helvetica, sans-serif; color: black; font-size: 10pt;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Indeks Pengelolaan Keuangan Daerah 2021, klik disini &gt;&gt;&gt;</span></span></span></span></span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">&nbsp;</span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-family: arial, helvetica, sans-serif; color: black; font-size: 10pt;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Indeks Pengelolaan Keuangan Daerah 2022, klik disini &gt;&gt;&gt;</span></span></span></span></span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">&nbsp;</span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; line-height: 1.1;"><span style="font-family: arial, helvetica, sans-serif; color: black; font-size: 10pt;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Indeks Pengelolaan Keuangan Daerah 2023, klik disini &gt;&gt;&gt;</span></span></span></span></span></p>
+
+<p style="margin: 0cm; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px;">&nbsp;</p>
