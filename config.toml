@@ -2,7 +2,7 @@
 
 baseurl = ""
 metaDataFormat = "yaml"
-title = "Badan Penelitian dan Pengembangan Provinsi Kalimantan Barat"
+title = "Balitbang Provinsi Kalbar"
 theme = "blist"
 DefaultContentLanguage = "id"
 DefaultContentLanguageInSubdir = false
