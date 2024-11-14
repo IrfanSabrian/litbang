@@ -3,33 +3,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href='{{ if isset .Site.Params "favicon" }}{{ .Site.Params.favicon }}{{ else }}/favicon.ico{{ end }}'>
 
+  <!-- Menambahkan font Marcellus dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
   <title>
   {{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}
   </title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
-  {{- if .Keywords }}
-  <meta name="keywords" content='{{ delimit .Keywords "," }}' />
-  {{ end -}}
-  {{- if .Params.Author }}
-  <meta name="author" content="{{ .Params.Author}}" />
-  {{ end -}}
 
+  <!-- Menambahkan file CSS -->
   {{ hugo.Generator }}
-
-  {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
+  {{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
   {{ if hugo.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
   {{ else }}
   {{- $styles := $styles | css.PostCSS | minify | fingerprint -}}
-  {{/*  <link
-    rel="stylesheet"
-    href="{{ $styles.Permalink }}"
-    integrity="{{ $styles.Data.Integrity }}"
-  />  */}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" />
   {{ end }}
 
-
+  <style>
+    body {
+      font-family: 'poppins', serif;
+    }
+  </style>
 
   <!-- Katex support -->
   {{ if .Params.math }}
@@ -39,19 +35,6 @@
       integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv"
       crossorigin="anonymous"
     >
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
-      integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
-      crossorigin="anonymous"
-    ></script>
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
-      integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script>
   {{ end }}
 
   {{ range .AlternativeOutputFormats -}}

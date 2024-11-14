@@ -1021,24 +1021,7 @@ hari = "Kamis"
 text = "Selamat Datang di Website Resmi Badan Penelitian dan Pengembangan Provinsi Kalimantan Barat"
 
 
-[[params.sliders.images]]
-url = "Slide Web Utama Balitbang.png"
-extension = "png"
 
-
-[[params.sliders.images]]
-url = "Slider HKI 2024.png"
-extension = "png"
-
-
-[[params.sliders.images]]
-url = "Slider HUT Kota Pontianak 2024.png"
-extension = "png"
-
-
-[[params.sliders.images]]
-url = "Slider Jurnal 2024.png"
-extension = "png"
 
 
 [[params.sliders.images]]

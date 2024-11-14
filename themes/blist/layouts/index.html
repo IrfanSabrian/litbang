@@ -36,7 +36,7 @@
   .swiper-pagination-bullet {
     width: 30px; /* Set width of the rectangular bullets */
     height: 5px; /* Set height of the rectangular bullets */
-    background-color: gray; /* Set background color to black (adjust as needed) */
+    background-color: #e4e4e4; /* Set background color to black (adjust as needed) */
     border-radius: 5px; /* Optional: Rounds the corners, remove if you want sharp edges */
     margin: 0 5px; /* Optional: Adds space between the bullets */
   }
@@ -68,6 +68,33 @@
     font-size: 30px; /* Mengubah ukuran ikon panah */
   }
 
+    @keyframes fadeInMove {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -100%); /* Bergerak dari atas */
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* Posisi akhir (pusat) */
+    }
+  }
+
+  .animated-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-family: 'Marcellus', serif;
+    z-index: 3;
+    text-align: center;
+    width: 80%;
+    color: white;
+    animation: fadeInMove 2s ease-in-out; /* Memperkenalkan animasi */
+    opacity: 0; /* Memastikan teks tidak terlihat sebelum animasi dimulai */
+    animation-fill-mode: forwards; /* Memastikan animasi tetap di akhir posisi */
+  }
+
   .container {
     white-space: nowrap;
   }
@@ -91,33 +118,29 @@
 {{ if len $sliderImages }}
 <div class="swiper mySwiper" style="background-color: black">
   <div class="swiper-wrapper">
+    <p class="font-semibold animated-text">
+      {{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp; {{ end }}
+    </p>
+    
     {{ range $sliderImages }}
     <div class="swiper-slide" style="background-color: black">
-      <p
-        class="font-semibold text-white"
-        style="
-          position: absolute;
-          margin-bottom: 30px;
-          font-size: 48px;
-          animation: fadeInDown 1s both;
-          z-index: 2;
-        "
-      >
-        {{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp; {{ end }}
-      </p>
-
       <img
         src="sliders/{{ .url }}"
         alt="Slider Image"
-        style="width: 100%; opacity: 0.6"
+        style="
+          width: 100%; opacity: 0.6;
+          z-index: -1;
+        "
       />
     </div>
-    {{ end }} {{ end }}
+    {{ end }}
+    {{ end }}
   </div>
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-pagination"></div>
 </div>
+
 
 {{ end }}
   <!-- Initialize Swiper -->
@@ -127,14 +150,14 @@
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
-        delay: 2500, // Delay between slides
+        delay: 4000, // Delay between slides
         disableOnInteraction: false,
       },
       effect: 'fade',
       fadeEffect: {
-        crossFade: true, // Optional: Enables cross-fading between slides
+        crossFade: true, // Enables cross-fading between slides
       },
-      speed: 2500, // Adjust this value to change the animation duration (in ms)
+      speed: 2500, // Animation duration (in ms)
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -144,11 +167,21 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      on: {
+        slideChangeTransitionStart: function () {
+          // Reset animation
+          const animatedTexts = document.querySelectorAll('.animated-text');
+          animatedTexts.forEach((text) => {
+            text.style.animation = 'none'; // Reset animation
+            // Trigger reflow/restart of animation
+            void text.offsetWidth;
+            text.style.animation = 'fadeInMove 2s ease-in-out forwards'; // Restart animation
+          });
+        },
+      },
     });
   });
 </script>
-
-
 
 <script>
   function scrollRight() {
@@ -173,42 +206,42 @@
 </script>
 
 <!-- Container Utama dengan Grid -->
-<div class="grid grid-cols-1 md:grid-cols-6 gap-4 lg:gap-8 bg-white dark:bg-gray-800 p-5">
-
-  <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-4 md:col-span-4">
+<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16 fade-in" id="animateMe" >
+  <div class="bg-white dark:bg-gray-300">
     {{ $frontBundle := .Site.Params.frontBundle | default "berita" }}
-    <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">{{ $frontBundle | title }}</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8 px-5">
-      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle) }}
-      <div class="rounded-lg w-full h-full">
+    <h2 class="text-2xl font-bold mt-5 text-center mb-5 text-green-700">{{ $frontBundle | title }}</h2>
+    <div class="grid grid-cols-1 min-h-72 sm:grid-cols-2 mx-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8 px-5">
+      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
+      <div class="rounded-lg w-full h-full ">
         {{- partial "blog-card.html" . -}}
       </div>
       {{ end }}
     </div>
-    {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
-    <div class="text-center mb-8 mt-4">
-      <a class="px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white" href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
-        {{ i18n "morePosts" }}
-      </a>
-    </div>
-    {{ end }}
   </div>
-
-  <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-4 md:col-span-2">
-    {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
-    <div class="scroll-container pb-5">
-      <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">{{ $frontBundle2 | title }}</h2>
-      <div class="scroll-content animation fade-in h-96 mb-5">
-        {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
-        <div class="rounded-lg h-full mb-2">
-          <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
+  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
+  <div class="text-center mb-8 mt-4">
+    <a class='px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white' href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
+      {{ i18n "morePosts" }}
+    </a>
   </div>
-
+  {{ end }}
 </div>
+
+<div class="bg-white dark:bg-gray-300 grid md:grid-cols-1 gap-4 lg:gap-x-16 fade-in" id="animateMe">
+  {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
+  <div class="scroll-container pb-5">
+    <h2 class="text-2xl font-bold mt-5 text-center text-green-700">{{ $frontBundle2 | title }}</h2>
+    <div class="scroll-content animation fade-in h-96 mb-5" id="animateMe2">
+      {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
+      <div class="rounded-lg h-full mb-2">
+        <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+
+
 
 <!--<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16">
     <div>
