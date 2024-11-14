@@ -19,7 +19,7 @@ url = "/en/blog/emoji-support/"
 weight = 4
 [params]
 domain = 'litbang.kalbarprov.go.id'
-phone = "Nomor HP Anda"
+phone = "(0561) 748881"
 address = "Jalan Jenderal Ahmad Yani Pontianak Kompleks Kantor Gubernur Kalimantan Barat Kode Pos 78124"
 email = "litbang@kalbarprov.go.id"
 darkModeToggle = true

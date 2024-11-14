@@ -1,17 +1,5 @@
 {{ define "main" }}
 
-<!-- Running Text -->
-{{ $runningText := .Site.Params.running_text }}
-{{ if $runningText }}
-<div class="w-full max-w-full bg-white p-4 border border-gray-300 shadow rounded">
-    <div class="marquee">
-        <div class="marquee-text">
-            <p class="text-lg font-semibold text-black" style="font-size: 0.9rem;">{{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp;    {{ end }}</p>
-        </div>
-    </div>
-</div>
-{{ end }}
-
     <style>
     .marquee {
         overflow: hidden;
@@ -62,15 +50,24 @@
 </style>
 <!-- Swiper -->
 
+{{ $runningText := .Site.Params.running_text }}
+{{ if $runningText }}
+
 {{ $sliderImages := .Site.Params.sliders.images }}
 
 {{ if len $sliderImages }}
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
     {{ range $sliderImages }}
-      <div class="swiper-slide">
-        <img src="sliders/{{ .url }}" alt="Slider Image" style="width:100%">
+      <div class="swiper-slide" style="background-color: black;">
+                    <p class="font-semibold text-white" style=" position: absolute;
+  margin-bottom: 30px;
+  font-size: 48px;
+  animation: fadeInDown 1s both; z-index: 2;">{{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp;    {{ end }}</p>
+        
+        <img src="sliders/{{ .url }}" alt="Slider Image" style="width:100%; opacity: 0.6;">
       </div>
+    {{ end }}
     {{ end }}
   </div>
   <div class="swiper-button-next"></div>
