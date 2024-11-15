@@ -116,7 +116,7 @@
 {{ $sliderImages := .Site.Params.sliders.images }}
 
 {{ if len $sliderImages }}
-<div class="swiper mySwiper" style="background-color: black">
+<div class="swiper mySwiper" style="background-color: black; height: 89vh;">
   <div class="swiper-wrapper">
     <p class="font-semibold animated-text">
       {{ range $runningText }}{{ .text }}&nbsp;&nbsp;&nbsp;&nbsp; {{ end }}
@@ -205,42 +205,62 @@
   };
 </script>
 
-<!-- Container Utama dengan Grid -->
-<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16 fade-in" id="animateMe" >
+<div class="md:gap-4 lg:gap-x-16 fade-in" id="animateMe">
   <div class="bg-white dark:bg-gray-300">
-    {{ $frontBundle := .Site.Params.frontBundle | default "berita" }}
+    {{ $frontBundle := .Site.Params.frontBundle | default "berita" | lower }}
     <h2 class="text-2xl font-bold mt-5 text-center mb-5 text-green-700">{{ $frontBundle | title }}</h2>
-    <div class="grid grid-cols-1 min-h-72 sm:grid-cols-2 mx-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-8 px-5">
-      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
-      <div class="rounded-lg w-full h-full ">
-        {{- partial "blog-card.html" . -}}
+    
+    <!-- Swiper Berita Section -->
+    <div class="swiper swiper-berita min-h-72 mx-auto gap-4 mb-8 px-5">
+      <div class="swiper-wrapper">
+        {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle) }}
+        <div class="swiper-slide rounded-lg w-full h-full">
+          {{- partial "blog-card.html" . -}}
+        </div>
+        {{ end }}
       </div>
-      {{ end }}
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
+
   </div>
+
   {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
   <div class="text-center mb-8 mt-4">
-    <a class='px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white' href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
+    <a class='px-8 py-5 rounded-2xl transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-white' href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
       {{ i18n "morePosts" }}
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6l6 6-6 6" />
+      </svg>
     </a>
   </div>
   {{ end }}
 </div>
 
-<div class="bg-white dark:bg-gray-300 grid md:grid-cols-1 gap-4 lg:gap-x-16 fade-in" id="animateMe">
-  {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
-  <div class="scroll-container pb-5">
-    <h2 class="text-2xl font-bold mt-5 text-center text-green-700">{{ $frontBundle2 | title }}</h2>
-    <div class="scroll-content animation fade-in h-96 mb-5" id="animateMe2">
-      {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
-      <div class="rounded-lg h-full mb-2">
-        <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-
-
+<!-- Initialize Swiper for Berita Section -->
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    var beritaSwiper = new Swiper(".swiper-berita", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
 
 
 <!--<div class="grid md:grid-cols-1 gap-4 lg:gap-x-16">
@@ -291,7 +311,7 @@
 {{ $agenda := .Site.Params.agenda }}
 {{ if $agenda }}
 <div class="w-full max-w-full p-4 border border-gray-300 shadow rounded-2xl mb-6 pb-6" style="background-color: #50B069;">
-  <h2 class="text-2xl font-bold mt-6 text-center text-white dark:text-white mb-4">Agenda</h2>
+  <h2 class="text-2xl font-bold mt-6 text-center text-white dark:text-white mb-4" id="animateMe">Agenda</h2>
     <div class="marquee-container" style="overflow: hidden; white-space: nowrap;">
         <div class="marquee-content" style="display: inline-flex; animation: marquee 30s linear infinite;">
             {{ range $agenda }}
@@ -321,6 +341,58 @@
 </div>
 
 {{ end }}
+
+
+
+
+<div class="bg-white dark:bg-gray-300 md:gap-4 lg:gap-x-16 fade-in" id="animateMe">
+  {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" | lower }}
+  <div class="scroll-container pb-5">
+    <h2 class="text-2xl font-bold mt-5 text-center text-green-700">{{ $frontBundle2 | title }}</h2>
+    <div class="scroll-content animation fade-in h-96 mb-5" id="animateMe2">
+      {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
+      <div class="rounded-lg h-full mb-2">
+        <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="md:gap-4 lg:gap-x-16 fade-in" id="animateMe">
+  <div class="bg-white dark:bg-gray-300">
+    {{ $frontBundle := .Site.Params.frontBundle | default "berita" }}
+    <h2 class="text-2xl font-bold mt-5 text-center mb-5 text-green-700">{{ $frontBundle | title }}</h2>
+    <div class="min-h-72 mx-auto gap-4 mb-8 px-5">
+      {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
+      <div class="rounded-lg w-full h-full">
+        {{- partial "blog-card.html" . -}}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
+  <div class="text-center mb-8 mt-4">
+    <a class='px-8 py-3 rounded transition-colors {{ default "bg-defaultColor" .Site.Params.ascentColor }} text-gray-100 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white' href="{{ lower (replace $frontBundle " " "-") | absLangURL }}" lang="{{ .Lang }}">
+      {{ i18n "morePosts" }}
+    </a>
+  </div>
+  {{ end }}
+</div>
+
+<div class="bg-white dark:bg-gray-300 md:gap-4 lg:gap-x-16 fade-in" id="animateMe">
+  {{ $frontBundle2 := .Site.Params.frontBundle2 | default "gallery" }}
+  <div class="scroll-container pb-5">
+    <h2 class="text-2xl font-bold mt-5 text-center text-green-700">{{ $frontBundle2 | title }}</h2>
+    <div class="scroll-content animation fade-in h-96 mb-5" id="animateMe2">
+      {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle2) }}
+      <div class="rounded-lg h-full mb-2">
+        <div class="content hover transition duration-500 ease-in-out h-full">{{- partial "blog-card.html" . -}}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
 
 <style>
 @keyframes marquee {
